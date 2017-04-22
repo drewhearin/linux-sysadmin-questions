@@ -70,24 +70,25 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * What is SMTP? Give the basic scenario of how a mail message is delivered via SMTP.
 > 1. Eastablish TCP connection:
-> 2. a. Client sends a HELO command which identifies sender and then server responds a 250 Requested mail action okay message.
->    b. Client sends a MAIL command and server responses ok which means to ready to receive messages.
->    c. Client sends RCPT commands which identify receiver and server responses whether server receives this email or not.
->    d. Client sends data with DATA command and QUTI to quit.
+> 2. Send mail message:
+> a. Client sends a HELO command which identifies sender and then server responds a 250 Requested mail action okay message.
+> b. Client sends a MAIL command and server responses ok which means to ready to receive messages.
+> c. Client sends RCPT commands which identify receiver and server responses whether server receives this email or not.
+> d. Client sends data with DATA command and QUTI to quit.
 
 * What is RAID? What is RAID0, RAID1, RAID5, RAID10?
 > RAID: stands for Redundant Array of Independent Disks. By placing data on multiple disk, I/O operations can overlap in a balanced way, improving performance and increase fault tolerance.
 > RAID0: Good speed. Bad redundant.
-![raid0.png](raid0)
+![raid0 ](raid0.png)
 
 > RAID1: Get some redundancy with limited number of disks but comsume a lot of storage space 
-![raid1.png](raid1)
+![raid1 ](raid1.png)
 
 > RAID5: Get a balance of redundancy and disk space, use XOR to resume data.
-![raid5.png](raid5)
+![raid5 ](raid5.png)
 
 > RAID10: Good speed and redundancy but need half of disk space
-![raid10.png](raid10)
+![raid10 ](raid10.png)
 
 * What is a level 0 backup? What is an incremental backup?
 > Level 0 means full backup. Incremental backup captures oly the changes made since the last incremental backup. Saves both time and storage space and ensures that your backup is up to date. (Fast backups, low storage space but slower recovery and risk of data loss)
