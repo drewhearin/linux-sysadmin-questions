@@ -38,13 +38,31 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 ####[[⬆]](#toc) <a name='general'>General Questions:</a>
 
 * What did you learn yesterday/this week?
+    Fix this readme.
+	
 * Talk about your preferred development/administration environment. (OS, Editor, Browsers, Tools etc.)
+    Emacs, Arch Linux.
+	
 * Tell me about the last major Linux project you finished.
+    Blog-minimal --[https://github.com/thiefuniverse/blog-minimal]
+	
 * Tell me about the biggest mistake you've made in [some recent time period] and how you would do it differently today. What did you learn from this experience?
+	Humm.... Let me think it over .... 	
+	
 * Why we must choose you?
+	Energetic, humorous, like programming, learn quickly.
+  
 * What function does DNS play on a network?
+	DNS is like a phone book for the Internet. If you know a person's name and don't know their telephone number, you can simply look it up in a phone book. DNS provides this same service to the Internet. When we visit website like microsoft.com, our computers use DNS to retrieve it's IP address and then send requests to this IP.
+  
 * What is HTTP?
+	HTTP is short for HyperText Transfer Protocol. HTTP is the underlying protocol usesd by the World Wide Web and this protocol defines how messages are formatted and transmitted, and what actioins Web servers and browsers should take in response to various commands.
+	When you enter a URL in your browser, this actually sends a HTTP command to the Web server directing it to fetch and transmit the requested Web page. (The other main standard that controls how the World Wide Web works is HTML, which covers how Web pages are formatted and dislpayed)
+	
 * What is an HTTP proxy and how does it work?
+  A HTTP proxy speaks HTTP protocol. The browser sends a request to the *proxy server* and the *proxy server* will then forward the request to the *Real server*. The *Real server* will only see the proxy as connection and answer to the proxy just like a client. 
+  *Proxy server* receives the response and forwards it back to the client.
+  
 * Describe briefly how HTTPS works.
 * What is SMTP? Give the basic scenario of how a mail message is delivered via SMTP.
 * What is RAID? What is RAID0, RAID1, RAID5, RAID10?
