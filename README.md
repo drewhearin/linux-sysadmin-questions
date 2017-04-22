@@ -65,11 +65,48 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 > Proxy server* receives the response and forwards it back to the client.
   
 * Describe briefly how HTTPS works.
-* What is SMTP? Give the basic scenario of how a mail message is delivered via SMTP.
-* What is RAID? What is RAID0, RAID1, RAID5, RAID10?
-* What is a level 0 backup? What is an incremental backup?
-* Describe the general file system hierarchy of a Linux system.
+> Servers and clients will communicate with others over a secure SSL connection that encrypts and decrypts their requests and responses. (The SSL layer can verify that you are talking directly to the server that you think you are talking to and ensure that only the server can read read what you send it and only you can read what it sends back.
+> SSL Connection Eastablished( 1. Hello 2. Certificate Exchange 3. KeyExchange)
 
+* What is SMTP? Give the basic scenario of how a mail message is delivered via SMTP.
+> 1. Eastablish TCP connection:
+> 2. a. Client sends a HELO command which identifies sender and then server responds a 250 Requested mail action okay message.
+>    b. Client sends a MAIL command and server responses ok which means to ready to receive messages.
+>    c. Client sends RCPT commands which identify receiver and server responses whether server receives this email or not.
+>    d. Client sends data with DATA command and QUTI to quit.
+
+* What is RAID? What is RAID0, RAID1, RAID5, RAID10?
+> RAID: stands for Redundant Array of Independent Disks. By placing data on multiple disk, I/O operations can overlap in a balanced way, improving performance and increase fault tolerance.
+> RAID0: Good speed. Bad redundant.
+![raid0.png](raid0)
+
+> RAID1: Get some redundancy with limited number of disks but comsume a lot of storage space 
+![raid1.png](raid1)
+
+> RAID5: Get a balance of redundancy and disk space, use XOR to resume data.
+![raid5.png](raid5)
+
+> RAID10: Good speed and redundancy but need half of disk space
+![raid10.png](raid10)
+
+* What is a level 0 backup? What is an incremental backup?
+> Level 0 means full backup. Incremental backup captures oly the changes made since the last incremental backup. Saves both time and storage space and ensures that your backup is up to date. (Fast backups, low storage space but slower recovery and risk of data loss)
+
+* Describe the general file system hierarchy of a Linux system.
+>       /bin       Essential command binaries
+>       /boot      Static files of the boot loader
+>       /dev       Device files
+>       /etc       Host-specific system configuration
+>       /lib       Essential shared libraries and kernel modules
+>       /media     Mount point for removeable media
+>       /mnt       Mount point for mounting a filesystem temporarily
+>       /opt       Add-on application software packages
+>       /sbin      Essential system binaries
+>       /srv       Data for services provided by this system
+>       /tmp       Temporary files
+>       /usr       Secondary hierarchy
+>       /var       Variable data
+>       /proc      Virtual filesystem (contains runtime system infomation).
 
 ####[[⬆]](#toc) <a name='simple'>Simple Linux Questions:</a>
 
