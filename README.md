@@ -69,12 +69,16 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 > SSL Connection Eastablished( 1. Hello 2. Certificate Exchange 3. KeyExchange)
 
 * What is SMTP? Give the basic scenario of how a mail message is delivered via SMTP.
- - Eastablish TCP connection:
- - Send mail message:
-  + Client sends a HELO command which identifies sender and then server responds a 250 Requested mail action okay message.
-  + Client sends a MAIL command and server responses ok which means to ready to receive messages.
-  + Client sends RCPT commands which identify receiver and server responses whether server receives this email or not.
-  + Client sends data with DATA command and QUTI to quit.
+> 1. Eastablish TCP connection:
+> 2. Send mail message:
+<br>
+> + Client sends a HELO command which identifies sender and then server responds a 250 Requested mail action okay message.
+<br>
+> + Client sends a MAIL command and server responses ok which means to ready to receive messages.
+<br>
+> + Client sends RCPT commands which identify receiver and server responses whether server receives this email or not.
+<br>
+> + Client sends data with DATA command and QUTI to quit.
 
 * What is RAID? What is RAID0, RAID1, RAID5, RAID10?
 > RAID: stands for Redundant Array of Independent Disks. By placing data on multiple disk, I/O operations can overlap in a balanced way, improving performance and increase fault tolerance.
