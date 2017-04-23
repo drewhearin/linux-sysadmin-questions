@@ -71,7 +71,6 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What is SMTP? Give the basic scenario of how a mail message is delivered via SMTP.
 > 1. Eastablish TCP connection:
 > 2. Send mail message:
-<br>
 > + Client sends a HELO command which identifies sender and then server responds a 250 Requested mail action okay message.
 <br>
 > + Client sends a MAIL command and server responses ok which means to ready to receive messages.
@@ -86,12 +85,15 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 ![raid0 ](raid0.png)
 
 > RAID1: Get some redundancy with limited number of disks but comsume a lot of storage space 
+> <br>
 ![raid1 ](raid1.png)
 
 > RAID5: Get a balance of redundancy and disk space, use XOR to resume data.
+> <br>
 ![raid5 ](raid5.png)
 
 > RAID10: Good speed and redundancy but need half of disk space
+> <br>
 ![raid10 ](raid10.png)
 
 * What is a level 0 backup? What is an incremental backup?
@@ -116,9 +118,15 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 ####[[⬆]](#toc) <a name='simple'>Simple Linux Questions:</a>
 
 * What is the name and the UID of the administrator user?
+> 
 * How to list all files, including hidden ones, in a directory?
+> ls -a
+
 * What is the Unix/Linux command to remove a directory and its contents?
+> rm -R directory-name
+
 * Which command will show you free/used memory? Does free memory exist on Linux?
+
 * How to search for the string "my konfi is the best" in files of a directory recursively?
 * How to connect to a remote server or what is SSH?
 * How to get all environment variables and how can you use them?
@@ -135,6 +143,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What is a bash alias?
 * How do you set the mail address of the root/a user?
 * What does CTRL-c do?
+> Terminate current process.
+
 * What is in /etc/services?
 * How to redirect STDOUT and STDERR in bash? (> /dev/null 2>&1)
 * What is the difference between UNIX and Linux.
