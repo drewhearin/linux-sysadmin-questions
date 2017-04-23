@@ -45,7 +45,7 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 > Emacs, Arch Linux.
 	
 * Tell me about the last major Linux project you finished.
-> Blog-minimal --[https://github.com/thiefuniverse/blog-minimal]
+> Blog-minimal -- A static blog generator based on org mode in emacs. [https://github.com/thiefuniverse/blog-minimal]
 	
 * Tell me about the biggest mistake you've made in [some recent time period] and how you would do it differently today. What did you learn from this experience?
 > Humm.... Let me think it over .... 	
@@ -81,7 +81,7 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 > RAID0: Good speed. Bad redundant.
 ![raid0 ](raid0.png)
 
-> RAID1: Get some redundancy with limited number of disks but comsume a lot of storage space 
+> RAID1: Get some redundancy with limited number of disks but consume a lot of storage space 
 > <br>
 ![raid1 ](raid1.png)
 
@@ -115,31 +115,80 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 ####[[⬆]](#toc) <a name='simple'>Simple Linux Questions:</a>
 
 * What is the name and the UID of the administrator user?
-
+> root,  0
 * How to list all files, including hidden ones, in a directory?
-> ls -a
-
-* What is the Unix/Linux command to remove a directory and its contents?
-> rm -R directory-name
-
+> ls -a 
 * Which command will show you free/used memory? Does free memory exist on Linux?
+> free
+> (total = used + free + cached/buffer)
+> Memory that is free is actually harder to use because it has to be transitioned from free to in use. Memory that is already in use is available but not free amd can easily be switched to another use.
 
 * How to search for the string "my konfi is the best" in files of a directory recursively?
+> grep -ri string directory/
+
 * How to connect to a remote server or what is SSH?
+> SSH (Secure Socket Shell) is a network protocol that provides administrators with a secure way to access a remote computer. SSH provides strong authentication and secure encrypted data communications between two computers connecting over an insecure network.
+> ssh loginName@serverIP    (login command)
+
 * How to get all environment variables and how can you use them?
+> env, printenv, set 
+> myName="thiefunvierse"; export myName
+> Then we can use *echo $myName* to show "thiefunvierse".
+
 * I get "command not found" when I run ```ifconfig -a```. What can be wrong?
+> Maybe its default path is wrong. Try to run *locate ifconfig* and find complete path for ifconfig command.
+> Or install net-tools.
+
 * What happens if I type TAB-TAB?
+> Get command completion based curent input.
+
 * What command will show the available disk space on the Unix/Linux system?
+> df -h    # for human
+
 * What commands do you know that can be used to check DNS records?
+
 * What Unix/Linux commands will alter a files ownership, files permissions?
+> chown newOwner fileName
+> chown newOwner:newGroup fileName
+> chgrp newGroup fileName
+> chmod +x fileName
+> chmod u+x,g=rx,o=wrx fileName
+> chmod 570 fileName
+
 * What does ```chmod +x FILENAME```do?
+> Add executable permission to file.
+
 * What does the permission 0750 on a file mean?
+
 * What does the permission 0750 on a directory mean?
 * How to add a new system user without login permissions?
 * How to add/remove a group from a user?
 * What is a bash alias?
+> A alias for linux shell command.
+> For example, I use alias *lm = "ls -l | more"*, then we can just type lm like I type "ls -l | more".
+
 * How do you set the mail address of the root/a user?
-* What does CTRL-c do?
+* What does CTRL-c do?What can be wrong
+> Terminate current process.
+
+* What is in /etc/services?
+* How to redirect STDOUT and STDERR in bash? (> /dev/null 2>&1)
+* What is the difference between UNIX and Linux.
+* What is the difference between Telnet and SSH?
+* Explain the three load averages and what do they indicate. What command can be used to view the load averages?
+* Can you name a lower-case letter that is not a valid option for GNU ```ls```?
+> ls -j -y -z
+
+
+####[[⬆]](#toc) <a name='medium'>Medium Linux Questions:</a>
+
+* What do the following commands do and how would you use them?
+ * ```tee```
+ * ```awk```
+ * ```tr```
+ * ```cut```
+ * ```tac```
+ * ```curl```What can be wrong
 > Terminate current process.
 
 * What is in /etc/services?
