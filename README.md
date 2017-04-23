@@ -72,11 +72,11 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 > 1. Eastablish TCP connection:
 > 2. Send mail message:
 > + Client sends a HELO command which identifies sender and then server responds a 250 Requested mail action okay message.
-<br>
+> <br>
 > + Client sends a MAIL command and server responses ok which means to ready to receive messages.
-<br>
+> <br>
 > + Client sends RCPT commands which identify receiver and server responses whether server receives this email or not.
-<br>
+> <br>
 > + Client sends data with DATA command and QUTI to quit.
 
 * What is RAID? What is RAID0, RAID1, RAID5, RAID10?
