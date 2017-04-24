@@ -120,7 +120,9 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 > ls -a 
 * Which command will show you free/used memory? Does free memory exist on Linux?
 > free
+<br>
 > (total = used + free + cached/buffer)
+<br>
 > Memory that is free is actually harder to use because it has to be transitioned from free to in use. Memory that is already in use is available but not free amd can easily be switched to another use.
 
 * How to search for the string "my konfi is the best" in files of a directory recursively?
@@ -128,33 +130,43 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * How to connect to a remote server or what is SSH?
 > SSH (Secure Socket Shell) is a network protocol that provides administrators with a secure way to access a remote computer. SSH provides strong authentication and secure encrypted data communications between two computers connecting over an insecure network.
+<br>
 > ssh loginName@serverIP    (login command)
 
 * How to get all environment variables and how can you use them?
 > env, printenv, set 
+<br>
 > myName="thiefunvierse"; export myName
+<br>
 > Then we can use *echo $myName* to show "thiefunvierse".
 
 * I get "command not found" when I run ```ifconfig -a```. What can be wrong?
 > Maybe its default path is wrong. Try to run *locate ifconfig* and find complete path for ifconfig command.
+<br>
 > Or install net-tools.
 
 * What happens if I type TAB-TAB?
-> Get command completion based curent input.
+> Get command completion based on curent input.
 
 * What command will show the available disk space on the Unix/Linux system?
 > df -h    # for human
 
 * What commands do you know that can be used to check DNS records?
 > nslookup domainName     (nslookup thiefuniverse.github.io)
+<br>
 > dig @DNS_SERVER domainName QUERY_TYPE   ( dig @8.8.8.8 thiefuniverse.github.io A)
 
 * What Unix/Linux commands will alter a files ownership, files permissions?
 > chown newOwner fileName
+<br>
 > chown newOwner:newGroup fileName
+<br>
 > chgrp newGroup fileName
+<br>
 > chmod +x fileName
+<br>
 > chmod u+x,g=rx,o=wrx fileName
+<br>
 > chmod 570 fileName
 
 * What does ```chmod +x FILENAME```do?
@@ -162,27 +174,36 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * What does the permission 0750 on a file mean?
 > 0750 = User:rwx Group:r-x World:--- 
+<br>
 > r = read
+<br>
 > w = write
+<br>
 > x = execute (traverse for directories)
 
 * What does the permission 0750 on a directory mean?
 > 0750 = User:rwx Group:r-x World:--- 
+<br>
 > r = print a listing of all directory entries (like ls)
+<br>
 > w = create new directory entries
+<br>
 > x = traverse for directories, obtain the inode of directory entries
 
 
 * How to add a new system user without login permissions?
 > useradd -M newUser  (create a user without home)
+<br>
 > usermod -L newUser  (lock this user)
 
 * How to add/remove a group from a user?
 > sudo groupadd newGroup
+<br>
 > sudo groupdel newGroup
 
 * What is a bash alias?
 > A alias for linux shell command.
+<br>
 > For example, I use alias *lm = "ls -l | more"*, then we can just type lm like I type "ls -l | more".
 
 * How do you set the mail address of the root/a user?
@@ -193,21 +214,26 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * What is in /etc/services?
 > The /etc/services file contains information regarding the known services available in the DARPA Internet. For each service, a single line should be present with the following information:
-
+<br>
 > official_service_name  port_number/protocol_name  aliases
 
 * How to redirect STDOUT and STDERR in bash? (> /dev/null 2>&1)
 > file descriptor 1 : standard out
+<br>
 > file descriptor 2 : standard error
+<br>
 > 1>&-   : close 1 (close standard out)
+<br>
+
 > 2>&1   : combine the output of 2 and 1
-> >/dev/null   : prevent from showing on console
+<br>
+> /dev/null   : prevent from showing on console
 
 * What is the difference between UNIX and Linux.
-> Unix                                    Linux
-> old                                     based on Unix (new)
-> mainframes and high end computers       from mainframes to low end PC 
-> proprietary                             GNU license
+> Unix: old, mainframes and high end computers, proprietary
+<br>
+> Linux: based on Unix (new), from mainframes to low end PC, GNU license
+
 * What is the difference between Telnet and SSH?
 > ssh is a secured shell, where telnet is not a secured one.when you ssh to trasnfer data between a system, the data will be send in the encrypted form, where the hacker cannot encode or decode it. While you telnet,the data send between the system is alphabetical format(ASCII), where every one can understand. More over as per network security, telnet and ftp are prohibited. Always, trust SSL based data transfer.
 
