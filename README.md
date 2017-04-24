@@ -146,6 +146,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 > df -h    # for human
 
 * What commands do you know that can be used to check DNS records?
+> nslookup domainName     (nslookup thiefuniverse.github.io)
+> dig @DNS_SERVER domainName QUERY_TYPE   ( dig @8.8.8.8 thiefuniverse.github.io A)
 
 * What Unix/Linux commands will alter a files ownership, files permissions?
 > chown newOwner fileName
@@ -159,23 +161,59 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 > Add executable permission to file.
 
 * What does the permission 0750 on a file mean?
+> 0750 = User:rwx Group:r-x World:--- 
+> r = read
+> w = write
+> x = execute (traverse for directories)
 
 * What does the permission 0750 on a directory mean?
+> 0750 = User:rwx Group:r-x World:--- 
+> r = print a listing of all directory entries (like ls)
+> w = create new directory entries
+> x = traverse for directories, obtain the inode of directory entries
+
+
 * How to add a new system user without login permissions?
+> useradd -M newUser  (create a user without home)
+> usermod -L newUser  (lock this user)
+
 * How to add/remove a group from a user?
+> sudo groupadd newGroup
+> sudo groupdel newGroup
+
 * What is a bash alias?
 > A alias for linux shell command.
 > For example, I use alias *lm = "ls -l | more"*, then we can just type lm like I type "ls -l | more".
 
 * How do you set the mail address of the root/a user?
+> set mail address in ~/.forward
+
 * What does CTRL-c do?What can be wrong
 > Terminate current process.
 
 * What is in /etc/services?
+> The /etc/services file contains information regarding the known services available in the DARPA Internet. For each service, a single line should be present with the following information:
+
+> official_service_name  port_number/protocol_name  aliases
+
 * How to redirect STDOUT and STDERR in bash? (> /dev/null 2>&1)
+> file descriptor 1 : standard out
+> file descriptor 2 : standard error
+> 1>&-   : close 1 (close standard out)
+> 2>&1   : combine the output of 2 and 1
+> >/dev/null   : prevent from showing on console
+
 * What is the difference between UNIX and Linux.
+> Unix                                    Linux
+> old                                     based on Unix (new)
+> mainframes and high end computers       from mainframes to low end PC 
+> proprietary                             GNU license
 * What is the difference between Telnet and SSH?
+> ssh is a secured shell, where telnet is not a secured one.when you ssh to trasnfer data between a system, the data will be send in the encrypted form, where the hacker cannot encode or decode it. While you telnet,the data send between the system is alphabetical format(ASCII), where every one can understand. More over as per network security, telnet and ftp are prohibited. Always, trust SSL based data transfer.
+
 * Explain the three load averages and what do they indicate. What command can be used to view the load averages?
+> The averages are taken over the three time intervals ( one minute, three minutes, fifteen minutes).
+
 * Can you name a lower-case letter that is not a valid option for GNU ```ls```?
 > ls -j -y -z
 
