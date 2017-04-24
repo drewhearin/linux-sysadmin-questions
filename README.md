@@ -120,9 +120,9 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 > ls -a 
 * Which command will show you free/used memory? Does free memory exist on Linux?
 > free
-<br>
+> <br>
 > (total = used + free + cached/buffer)
-<br>
+> <br>
 > Memory that is free is actually harder to use because it has to be transitioned from free to in use. Memory that is already in use is available but not free amd can easily be switched to another use.
 
 * How to search for the string "my konfi is the best" in files of a directory recursively?
@@ -130,19 +130,19 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * How to connect to a remote server or what is SSH?
 > SSH (Secure Socket Shell) is a network protocol that provides administrators with a secure way to access a remote computer. SSH provides strong authentication and secure encrypted data communications between two computers connecting over an insecure network.
-<br>
+> <br>
 > ssh loginName@serverIP    (login command)
 
 * How to get all environment variables and how can you use them?
 > env, printenv, set 
-<br>
+> <br>
 > myName="thiefunvierse"; export myName
-<br>
+> <br>
 > Then we can use *echo $myName* to show "thiefunvierse".
 
 * I get "command not found" when I run ```ifconfig -a```. What can be wrong?
 > Maybe its default path is wrong. Try to run *locate ifconfig* and find complete path for ifconfig command.
-<br>
+> <br>
 > Or install net-tools.
 
 * What happens if I type TAB-TAB?
@@ -153,20 +153,20 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * What commands do you know that can be used to check DNS records?
 > nslookup domainName     (nslookup thiefuniverse.github.io)
-<br>
+> <br>
 > dig @DNS_SERVER domainName QUERY_TYPE   ( dig @8.8.8.8 thiefuniverse.github.io A)
 
 * What Unix/Linux commands will alter a files ownership, files permissions?
 > chown newOwner fileName
-<br>
+> <br>
 > chown newOwner:newGroup fileName
-<br>
+> <br>
 > chgrp newGroup fileName
-<br>
+> <br>
 > chmod +x fileName
-<br>
+> <br>
 > chmod u+x,g=rx,o=wrx fileName
-<br>
+> <br>
 > chmod 570 fileName
 
 * What does ```chmod +x FILENAME```do?
@@ -174,36 +174,36 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * What does the permission 0750 on a file mean?
 > 0750 = User:rwx Group:r-x World:--- 
-<br>
+> <br>
 > r = read
-<br>
+> <br>
 > w = write
-<br>
+> <br>
 > x = execute (traverse for directories)
 
 * What does the permission 0750 on a directory mean?
 > 0750 = User:rwx Group:r-x World:--- 
-<br>
+> <br>
 > r = print a listing of all directory entries (like ls)
-<br>
+> <br>
 > w = create new directory entries
-<br>
+> <br>
 > x = traverse for directories, obtain the inode of directory entries
 
 
 * How to add a new system user without login permissions?
 > useradd -M newUser  (create a user without home)
-<br>
+> <br>
 > usermod -L newUser  (lock this user)
 
 * How to add/remove a group from a user?
 > sudo groupadd newGroup
-<br>
+> <br>
 > sudo groupdel newGroup
 
 * What is a bash alias?
 > A alias for linux shell command.
-<br>
+> <br>
 > For example, I use alias *lm = "ls -l | more"*, then we can just type lm like I type "ls -l | more".
 
 * How do you set the mail address of the root/a user?
@@ -214,24 +214,24 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * What is in /etc/services?
 > The /etc/services file contains information regarding the known services available in the DARPA Internet. For each service, a single line should be present with the following information:
-<br>
+> <br>
 > official_service_name  port_number/protocol_name  aliases
 
 * How to redirect STDOUT and STDERR in bash? (> /dev/null 2>&1)
 > file descriptor 1 : standard out
-<br>
+> <br>
 > file descriptor 2 : standard error
-<br>
+> <br>
 > 1>&-   : close 1 (close standard out)
-<br>
+> <br>
 
 > 2>&1   : combine the output of 2 and 1
-<br>
+> <br>
 > /dev/null   : prevent from showing on console
 
 * What is the difference between UNIX and Linux.
 > Unix: old, mainframes and high end computers, proprietary
-<br>
+> <br>
 > Linux: based on Unix (new), from mainframes to low end PC, GNU license
 
 * What is the difference between Telnet and SSH?
