@@ -239,6 +239,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * Explain the three load averages and what do they indicate. What command can be used to view the load averages?
 > The averages are taken over the three time intervals ( one minute, three minutes, fifteen minutes).
+> <br>
+> uptime
 
 * Can you name a lower-case letter that is not a valid option for GNU ```ls```?
 > ls -j -y -z
@@ -248,25 +250,7 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * What do the following commands do and how would you use them?
  * ```tee```
- * ```awk```
- * ```tr```
- * ```cut```
- * ```tac```
- * ```curl```What can be wrong
-> Terminate current process.
-
-* What is in /etc/services?
-* How to redirect STDOUT and STDERR in bash? (> /dev/null 2>&1)
-* What is the difference between UNIX and Linux.
-* What is the difference between Telnet and SSH?
-* Explain the three load averages and what do they indicate. What command can be used to view the load averages?
-* Can you name a lower-case letter that is not a valid option for GNU ```ls```?
-
-
-####[[⬆]](#toc) <a name='medium'>Medium Linux Questions:</a>
-
-* What do the following commands do and how would you use them?
- * ```tee```
+> read a standard input and write to a standard output and file.
  * ```awk```
  * ```tr```
  * ```cut```
