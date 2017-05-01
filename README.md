@@ -252,17 +252,37 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
  * ```tee```
 > read a standard input and write to a standard output and file.
  * ```awk```
+> pattern matching and processing language
  * ```tr```
+> translate or delete characters 
  * ```cut```
+> remove sections from each line of lines
+ 
  * ```tac```
+> show file from last line to first line.
  * ```curl```
+> transfer data from or to a server.
  * ```wget```
+> network downloader
  * ```watch```
+> execute a program periodically.
  * ```head```
+> output the first part of files
  * ```tail```
+> output the last part of files
+
 * What does an ```&``` after a command do?
+> run this command in the background.
+
 * What does ```& disown``` after a command do?
+> &:   puts the job in the background, that is, makes it block on attempting to read input, and makes the shell not wait for its completion.
+> <br>
+> disown:  removes the process from the shell's job control, but it still leaves it connected to the terminal. One of the results is that the shell won't send it a SIGHUP. Obviously, it can only be applied to background jobs, because you cannot enter it when a foreground job is running.
+> <br>
+> nohup:  disconnects the process from the terminal, redirects its output to nohup.out and shields it from SIGHUP. One of the effects (the naming one) is that the process won't receive any sent NOHUP. It is completely independent from job control and could in principle be used also for foreground jobs (although that's not very useful).
+
 * What is a packet filter and how does it work?
+> 
 * What is Virtual Memory?
 * What is swap and what is it used for?
 * What is an A record, an NS record, a PTR record, a CNAME record, an MX record?
