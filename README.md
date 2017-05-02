@@ -275,16 +275,20 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 > run this command in the background.
 
 * What does ```& disown``` after a command do?
-> &:   puts the job in the background, that is, makes it block on attempting to read input, and makes the shell not wait for its completion.
+> - &:   puts the job in the background, that is, makes it block on attempting to read input, and makes the shell not wait for its completion.
 > <br>
-> disown:  removes the process from the shell's job control, but it still leaves it connected to the terminal. One of the results is that the shell won't send it a SIGHUP. Obviously, it can only be applied to background jobs, because you cannot enter it when a foreground job is running.
+> - disown:  removes the process from the shell's job control, but it still leaves it connected to the terminal. One of the results is that the shell won't send it a SIGHUP. Obviously, it can only be applied to background jobs, because you cannot enter it when a foreground job is running.
 > <br>
-> nohup:  disconnects the process from the terminal, redirects its output to nohup.out and shields it from SIGHUP. One of the effects (the naming one) is that the process won't receive any sent NOHUP. It is completely independent from job control and could in principle be used also for foreground jobs (although that's not very useful).
+> - nohup:  disconnects the process from the terminal, redirects its output to nohup.out and shields it from SIGHUP. One of the effects (the naming one) is that the process won't receive any sent NOHUP. It is completely independent from job control and could in principle be used also for foreground jobs (although that's not very useful).
 
 * What is a packet filter and how does it work?
 > 
 * What is Virtual Memory?
+> Virtual memory is a memory management capability of an OS that uses hardware and software to allow a computer to compensate for physical memory shortages by temppraily transferring data from random access memory to disk storage. Virtual address space is increased using active memory in RAM and inactive memory in hard disk drives to from contiguous addresses that hold both the application and its data.
+
 * What is swap and what is it used for?
+> Swap space in Linux is used when the amount of physical memory is full. If the system needs more memory resources and the RAM is full, inactive pages in memory are moved to the swap space. While swap space can help machines with a small amount of RAM, it should not be considered a replacement for more RAM. Swap space is located on hard drives, which have a slower access time than physical memory.
+
 * What is an A record, an NS record, a PTR record, a CNAME record, an MX record?
 * Are there any other RRs and what are they used for?
 * What is a Split-Horizon DNS?
