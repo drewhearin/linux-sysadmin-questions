@@ -290,7 +290,18 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 > Swap space in Linux is used when the amount of physical memory is full. If the system needs more memory resources and the RAM is full, inactive pages in memory are moved to the swap space. While swap space can help machines with a small amount of RAM, it should not be considered a replacement for more RAM. Swap space is located on hard drives, which have a slower access time than physical memory.
 
 * What is an A record, an NS record, a PTR record, a CNAME record, an MX record?
+> [wiki for DNS record](https://en.wikipedia.org/wiki/List_of_DNS_record_types)
+> <br>
+> A: Address record (Return a 32-bit IPv4 address, most commonly used to map hostnames to an IP address of the host) <br>
+> NS: Name server record (Delegates a DNS zone to use the given authoritative name servers) <br>
+> PTR: Pointer record (Pointer to a canonical name. Unlike a CNAME, DNS processing stops and just the name is returned. The most common use is for implementing reverse DNS lookups, but other uses include such things as DNS-SD). <br>
+> CNAME: Canonical name record (Alias of one name to another: the DNS lookup will continue by retrying the lookup with the new name) <br>
+> MX: Mail exchange record (Maps a domain name to a list of message transfer agents for that domain) <br>
+
 * Are there any other RRs and what are they used for?
+> A: Address record (Return a 128-bit IPv6 address, most commonly used to map hostnames to an IP address of the host) <br>
+> TSIG: Transaction Signature, URI: Uniform Resource Identifier.
+
 * What is a Split-Horizon DNS?
 * What is the sticky bit?
 * What does the immutable bit do to a file?
@@ -299,6 +310,16 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * How to force/trigger a file system check on next reboot?
 * What is SNMP and what is it used for?
 * What is a runlevel and how to get the current runlevel?
+> Each runlevel designates a different system configuration and allows access to a different combination of processes.
+> <br>
+> + 0 - System halt; no activity, the system can be safely powered down. 
+> + 1 - Single user; rarely used. 
+> + 2 - Multiple users, no NFS (network filesystem); also used rarely. 
+> + 3 - Multiple users, command line (i.e., all-text mode) interface; the standard runlevel for most Linux-based server hardware. 
+> + 4 - User-definable 
+> + 5 - Multiple users, GUI (graphical user interface); the standard runlevel for most Linux-based desktop systems. 
+> + 6 - Reboot; used when restarting the system.
+
 * What is SSH port forwarding?
 > 22
 * What is the difference between local and remote port forwarding?
