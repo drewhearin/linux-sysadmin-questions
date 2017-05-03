@@ -300,7 +300,11 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What is SNMP and what is it used for?
 * What is a runlevel and how to get the current runlevel?
 * What is SSH port forwarding?
+> 22
 * What is the difference between local and remote port forwarding?
+> - Local port forwarding creates an outgoing tunnel which can be used to bring a public internet computer to local machine. 
+> - Remote port forwarding creates an incoming tunnel which can be used to bring a local computer into the public internet. 
+
 * What are the steps to add a user to a system without using useradd/adduser?
 * What is MAJOR and MINOR numbers of special files?
 * Describe the mknod command and when you'd use it.
