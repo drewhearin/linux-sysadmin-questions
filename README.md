@@ -306,6 +306,18 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * What is the sticky bit?
 * What does the immutable bit do to a file?
 * What is the difference between hardlinks and symlinks? What happens when you remove the source to a symlink/hardlink?
+> ![hard-soft-link](hard-soft-link.jpg)
+> <br>
+> Underneath the file system files are represented by inodes.
+> A file in the file system is basically a link to an inode.
+> A hard link then just creates another file with a link to the same underlying inode.
+> 
+> When you delete a file it removes one link to the underlying inode. The inode is only deleted (or deletable/over-writable) when all links to the inode have been deleted.
+> 
+> A symbolic link is a link to another name in the file system.
+> 
+> Once a hard link has been made the link is to the inode. deleting renaming or moving the original file will not affect the hard link as it links to the underlying inode. Any changes to the data on the inode is reflected in all files that refer to that inode.
+
 * What is an inode and what fields are stored in an inode?
 * How to force/trigger a file system check on next reboot?
 * What is SNMP and what is it used for?
@@ -322,6 +334,8 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 
 * What is SSH port forwarding?
 > 22
+
+
 * What is the difference between local and remote port forwarding?
 > - Local port forwarding creates an outgoing tunnel which can be used to bring a public internet computer to local machine. 
 > - Remote port forwarding creates an incoming tunnel which can be used to bring a local computer into the public internet. 
